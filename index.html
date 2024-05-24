@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nome Feminino Aleatório</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Nome Feminino Aleatório</h1>
+        <p id="nome"></p>
+        <button onclick="gerarNome()">Gerar Outro Nome</button>
+    </div>
+    <script>
+        const nomes = [
+            "Ana", "Beatriz", "Carla", "Daniela", "Elisa", "Fernanda", 
+            "Gabriela", "Helena", "Isabela", "Joana", "Karina", "Larissa",
+            "Mariana", "Natália", "Olivia", "Patrícia", "Quitéria", "Renata",
+            "Sofia", "Tatiana", "Úrsula", "Valentina", "Wendy", "Xênia",
+            "Yasmin", "Zélia"
+        ];
+
+        function gerarNome() {
+            const nomeAleatorio = nomes[Math.floor(Math.random() * nomes.length)];
+            document.getElementById('nome').innerText = nomeAleatorio;
+        }
+
+        // Gera um nome aleatório ao carregar a página
+        window.onload = gerarNome;
+    </script>
+</body>
+</html>
